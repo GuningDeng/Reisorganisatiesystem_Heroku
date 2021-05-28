@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head') %>
+</head>
+<body>
+    <header>
+        <%- include('header') %>
+    </header>
+    <main>
+        <div class="container-bestemmming">
+            <div class="detail-card bestelling-finish">
+                <img src="images/pexels-pixabay-417344.jpg" alt="" srcset="">
+                <div class="finish-info">
+                    <div class="event-info">        
+                        <p>
+                            <b>hei, <%= userinfo.username %></b><br>
+                            <b>Uw Bestellen </b><br><br>
+                            <b>Bestemming:</b> 'Nader te bepalen'<br />
+                            <b>Date:</b> 'Nader te bepalen'<br />
+                            <b>City:</b> 'Nader te bepalen'<br />
+                            <b>Land:</b> 'Nader te bepalen'<br />
+                            <b>Ticketverkooper:</b> 'Nader te bepalen'<br />
+                            <b>prijs:</b> 'Nader te bepalen'<br>
+                            <b>prijs 1:</b> 'Nader te bepalen'<br>
+                            <b>Relevants attracties:</b> 'Nader te bepalen'<br><br>
+                        </p>
+                    </div>
+                    <div class="complete">
+                        <a href="/logout">
+                            <div class="complete-btn">
+                                Voltooid en log uit
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="skew-container">
+        <div class="skew-box"></div>
+        <div class="skew-box"></div>
+    </div>
+
+    <script src="js/ham.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head') %>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="headerbg">
+                <h2>Bestemmingen</h2>
+                <p>hei, <%= userinfo.username %></p>
+            </div>
+            <div class="page-name">
+            </div>
+            <div class="hamburger">
+                <a href="/bestemmingen">
+                    <h2>Bestemmingen</h2>
+                </a>
+                <a href="/events">
+                    <h2>Events</h2>
+                </a>
+                <a href="/raadplegen">
+                    <h2>Event raadplegen</h2>
+                </a>
+                <a href="/logout">
+                    <h2>AFMELDEN</h2>
+                </a>
+            </div>
+            <form action="" method="" class="search-form">
+                <input type="search" name="search" placeholder="serach">
+                <button type="submit" class="sub-button">
+                    <div class="search">
+                        <div class="search-2"></div>
+                        <div class="search-1"></div>
+                    </div>
+                </button>
+                
+            </form>
+            <div class="hambox">
+                <div class="ham-1"></div>
+                <div class="ham-2"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-bestemming">
+            <div class="bestemming-box">
+                <img src="images/Barcelona.jpg" alt="">
+                <a href="/bestemming">
+                    <div class="card">
+                        <h5>Barcelona</h5>
+                    </div>                    
+                </a>
+            </div>
+
+            <div class="bestemming-box">
+                <img src="images/Budapest.jpg" alt="">
+                <a href="/bestemming">
+                    <div class="card">
+                        <h5>Budapest</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bestemming-box">
+                <img src="images/Ijsland.jpg" alt="">
+                <a href="/bestemming">
+                    <div class="card">
+                        <h5>Ijsland</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bestemming-box">
+                <img src="images/Londen.jpg" alt="">
+                <a href="/bestemming">
+                    <div class="card">
+                        <h5>Londen</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bestemming-box">
+                <img src="images/Madrid.jpg" alt="">
+                <a href="/bestemming">
+                    <div class="card">
+                        <h5>Madrid</h5>                        
+                    </div>
+                </a>
+            </div>
+
+            <div class="bestemming-box">
+                <img src="images/Moscow.jpg" alt="">
+                <a href="/bestemming">
+                    <div class="card">
+                        <h5>Moscow</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bestemming-box">
+                <img src="images/New-York.jpg" alt="">
+                <a href="/bestemming">
+                    <div class="card">
+                        <h5>New York</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bestemming-box">
+                <img src="images/Parijs.jpg" alt="">
+                <a href="/bestemming">
+                    <div class="card">
+                        <h5>Parijs</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bestemming-box">
+                <img src="images/Rome.jpg" alt="">
+                <a href="/bestemming">
+                    <div class="card">
+                        <h5>Rome</h5>
+                    </div>                    
+                </a>
+            </div>
+            
+            <div class="bestemming-box">
+                <img src="images/Sidney.jpg" alt="">
+                <a href="/bestemming">
+                    <div class="card">
+                        <h5>Sidney</h5>
+                    </div>                    
+                </a>
+            </div>
+
+            <div class="bestemming-box">
+                <img src="images/Amsterdam.jpg" alt="">
+                <a href="/bestemming">
+                    <div class="card">
+                        <h5>Amsterdam</h5>
+                    </div>                    
+                </a>
+            </div>
+        </div>    
+    </main>
+    <footer>
+        <%- include('footer') %>
+    </footer>
+    <div class="skew-container">
+        <div class="skew-box"></div>
+        <div class="skew-box"></div>
+    </div>
+
+    <script src="js/ham.js"></script>
+</body>
+</html>

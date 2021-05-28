@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head') %>
+</head>
+<body>
+    <header>
+        <%- include('header') %>
+    </header>
+    <main>
+        <div class="container-bestemmming">
+            <div class="detail-card bestelling-finish">
+                <% if (!list.images[0]) { %>
+                    'Nader te bepalen'
+                <% } %>
+                <img src="<%= list.images[0] %>" class="list-img" alt="" >
+                <div class="finish-info">
+                    <div class="event-info">        
+                        <p >
+                            <b>hei, <%= userinfo.username %></b><br>
+                            <b>Informatie van Uw event en relevants attracties </b><br><br>
+                            <b>Event:</b> <%= list.name %> <br />
+                            <b>Date:</b> <% if (!list.dates) { %>
+                                'Nader te bepalen' 
+                            <% } %>
+                            <%= list.dates %>                                
+                            <% if (!list.datesLoc) { %>
+                                'Nader te bepalen: uur'
+                            <% } %>
+                            <%= list.datesLoc %> (lokale tijd.)                                
+                            <br />
+                            <b>City:</b> <% if (!list.venuesCity) { %>
+                                'Nader te bepalen'
+                            <% } %>
+                            <%= list.venuesCity %>                                
+                            <br />   
+                            <b>Land:</b> <% if (!list.venuesCountry) { %>
+                                'Nader te bepalen'
+                            <% } %>
+                            <%= list.venuesCountry %>                                
+                            <br /> 
+                            <b>Ticketverkooper:</b> <% if (list.promoter) { %>
+                                <%= list.promoter.name %>                                
+                            <% } %>
+                            'Nader te bepalen'
+                            <br />  
+                            <b>prijs:</b> <br>
+                            <% if (list.priceRanges) { %>
+                                <i>Min: </i><%= list.priceRanges.min %>. 
+                                <i>Max: </i><%= list.priceRanges.max %>. 
+                                <i>Type: </i> <%= list.priceRanges.type %>. 
+                                <i>Valuta: </i><%= list.priceRanges.currency %>                                 
+                            <%} else { %>
+                                'Nader te bepalen'
+                            <% } %> 
+                            <br />
+                            <b>prijs 1:</b><br>
+                            <% if (list.priceRanges1) { %>
+                                <i>Min: </i><%= list.priceRanges1.min %>. 
+                                <i>Max: </i><%= list.priceRanges1.max %>. 
+                                <i>Type: </i><%= list.priceRanges1.type %>. 
+                                <i>Valuta: </i><%= list.priceRanges1.currency %>                                 
+                            <%} else { %>
+                                'Nader te bepalen'
+                            <% } %>
+                            <br>
+                            <b>Relevants attracties:</b> <% if (!list.venuesCountry) { %>
+                                'Nader te bepalen'
+                            <% } %>
+                            <%= list.attractions %>
+                        </p>                        
+                    </div>
+                    <div class="complete">
+                        <a href="/logout">
+                            <div class="complete-btn">
+                                Voltooid en log uit
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal-x" ></div>
+    <div class="prompt-info">
+      <ul>
+          <li>De zoekopdracht mag niet leeg zijn.</li>
+          <li>Minimaal 3 letters en maximaal 10 letters.</li>
+          <li>Er mogen geen spaties zijn.</li>
+      </ul>
+      <div class="input-control">
+        <input type="submit" name="" class="button" id="confirmBtn" value="Bevestigen">
+      </div>
+    </div>
+    <div class="skew-container">
+        <div class="skew-box"></div>
+        <div class="skew-box"></div>
+    </div>
+
+    <script src="/js/ham.js"></script>
+    <script>
+        const form = document.querySelector('form');
+        const subBtn = document.querySelector('.sub-button');
+        const confirmBtn = document.getElementById('confirmBtn');
+        const modalX = document.querySelector('.modal-x');
+        const promptInfo = document.querySelector('.prompt-info');
+
+        form.addEventListener('submit', (e) => {
+            if (form.search.value == ''|| !form.search.match(/^([0-9a-zA-Z_\-]){3,10}$/)) {
+                console.log("search leeg.");
+                modalX.style.visibility = 'visible';
+                promptInfo.style.visibility = 'visible';
+                e.preventDefault();
+                subBtn.focus();
+                
+            }
+        }, false);
+
+        confirmBtn.addEventListener('click', () => {
+            modalX.style.visibility = 'hidden';
+            promptInfo.style.visibility = 'hidden';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head') %>
+</head>
+<body>
+    <div class="container">
+        <form action="/doLogin" method="POST" class="form-validate">
+            <h2>Reisorganisatiesystem</h2>
+            <div class="input-control">
+                <input type="text" name="username" id="username" title="Het domeingedeelte van het e-mailadres is ongeldig." pattern="^([a-z0-9_\.-]+)@ap\.be$" placeholder="email" required> 
+            </div>
+            <div class="input-control">
+                <input type="password" name="password" id="password" title="Wachtwoord is ongeldig." pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[\W_]).{10,}$" placeholder="password" required>
+            </div>    
+            <div class="input-control">
+                <input type="submit" name="submit" class="button" id="sivnginBtn" value="Log in">
+            </div>
+        </form>
+    </div>
+    <div class="skew-container">
+        <div class="skew-box"></div>
+        <div class="skew-box"></div>
+    </div>
+
+    <script src="/js/inputvalidate.js"></script>
+    
+</body>
+</html>

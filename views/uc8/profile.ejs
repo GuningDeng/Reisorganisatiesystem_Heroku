@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head') %>
+</head>
+<body>
+    <header>
+        <%- include('head') %>
+    </header>
+    <main>
+        <div class="container">
+            <form action="" method="POST">
+                <h2>Persoonsgegevens</h2>                
+                <div class="input-control">
+                    <input type="text" name="" id="voornaam" placeholder="Voornaam" disabled>
+                </div>                
+                <div class="input-control">
+                    <input type="text" name="" id="naam" placeholder="Naam" disabled>
+                </div>                
+                <div class="input-control">
+                    <input type="text" name="" id="geboortedatum" placeholder="Geboortedatum: d/m/y" disabled>
+                </div>                
+                <div class="input-control">
+                    <input type="text" name="" id="telefoonnummer" placeholder="Telefoonnummer" disabled>
+                </div>                
+                <div class="input-control">
+                    <input type="text" name="" id="email" placeholder="email" disabled>
+                </div>
+                <div class="input-control">
+                    <a href="/bestemmingen">
+                        <input type="button" name="" class="button" id="submit" value="Aanmaken">
+                    </a>
+                </div>
+            </form>
+        </div>
+    </main>
+    <div class="skew-container">
+        <div class="skew-box"></div>
+        <div class="skew-box"></div>
+    </div>
+
+    <script src="js/ham.js"></script>
+</body>
+</html>

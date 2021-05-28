@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head') %>
+</head>
+<body>
+    <header>
+        <%- include('header') %>
+    </header>
+    <div class="container-event">
+        <form action="/doSearch/" method="POST" class="consult-form">
+            <h2>Events & attracties Raadplegen</h2>
+            <p>Voer de naam, locatie (land of stad) of tijd(y-mm-dd) van het evenement of de attractie in (minimaal 3 letters, maximaal 10 letters, geen spaties).<br><br><br></p>
+            <div class="input-control">
+                <input type="search" name="search" placeholder="serach">
+            </div>            
+            <div class="input-control">
+                <input type="submit" name="" class="button" id="singinBtn" value="Zoeken">
+            </div>
+        </form>
+    </div>
+    <div class="modal-x" ></div>
+    <div class="prompt-info">
+        <ul>
+            <li>De zoekopdracht mag niet leeg zijn.</li>
+            <li>Minimaal 3 letters en maximaal 6 letters.</li>
+            <li>Er mogen geen spaties zijn.</li>
+        </ul>
+        <div class="input-control">
+            <input type="submit" name="" class="button" id="confirmBtn" value="Bevestigen">
+        </div>
+    </div>
+    <div class="skew-container">
+        <div class="skew-box"></div>
+        <div class="skew-box"></div>
+    </div>
+
+    <script src="/js/ham.js"></script>
+    <script>
+        const singinBtn = document.getElementById('singinBtn');
+        const confirmBtn = document.getElementById('confirmBtn');
+        const modalX = document.querySelector('.modal-x');
+        const promptInfo = document.querySelector('.prompt-info');
+        const form = document.querySelector('.consult-form');
+      
+        form.addEventListener('submit', (e) => {
+            if (form.search.value === '' || !form.search.value.match(/^([0-9a-zA-Z_\-]){3,10}$/)) {
+                // alert(`form.search.value`)
+                modalX.style.visibility = 'visible';
+                promptInfo.style.visibility = 'visible';
+                e.preventDefault();
+                singinBtn.focus();
+                
+            }
+        }, false);
+        
+
+        confirmBtn.addEventListener('click', () => {
+            modalX.style.visibility = 'hidden';
+            promptInfo.style.visibility = 'hidden';
+        });
+        
+    </script>
+</body>
+</html>
