@@ -1,7 +1,7 @@
 {
   "name": "it-project-reisorganisatiesystem",
   "version": "1.0.0",
-  "description": "",
+  "description": "Deelname Registreren’ (afkorting: UC 8) en ‘Events Raadplegen’ (afkorting: UC 9) van Reisorganisatiesystem. Technische track: HTML5, CSS3, Javascript, Node.js, Express.js, SJON, body-parser, ejs, express-session en node-fetch",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

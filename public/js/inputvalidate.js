@@ -1,3 +1,6 @@
+/**
+ * Schakel de standaard 'html5 input constraint validation API' uit. Aangepaste API.
+ */
 let forms = document.querySelectorAll('.form-validate');
 for (let i = 0; i < forms.length; i++) {
     forms[i].setAttribute('novalidate', true);

@@ -36,7 +36,7 @@ const loadEvents = async () => {
         }));        
         return eventData;
     } catch (error) {
-
+        
     }
 }
 
