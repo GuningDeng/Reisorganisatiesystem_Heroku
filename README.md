@@ -19,6 +19,6 @@ Log in met:
 username: cat357@ap.be  
 password: >#XzsAQ1Yv
 
-(https://github.com/GuningDeng/Reisorganisatiesystem_Heroku/blob/master/ui/Image%207.jpg)
+![Login](https://github.com/GuningDeng/Reisorganisatiesystem_Heroku/blob/master/ui/Image%207.jpg)
 
 ***
